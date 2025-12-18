@@ -1,0 +1,107 @@
+:root{
+    --h2-size: 4vw; /* header to use when we want it to start feeling a lil big. ex: product titles */
+    --h3-size: 3vw; /* medium sized "paragraph headers". ie "Jank" text in nav */
+    --h5-size: 2vw; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+    --p-size: 1.15vw;
+}
+
+/* Extra small phones */
+@media (min-width: 376px) and (max-width: 480px) {
+    :root{
+        --h2-size: 35px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 12px;
+    }
+}
+
+/* Phones */
+@media (min-width: 481px) and (max-width: 640px) {
+    :root{
+        --h2-size: 35px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 12px;
+    }
+}
+
+/* Large phones / small tablets */
+@media (min-width: 641px) and (max-width: 768px) { 
+    :root{
+        --h2-size: 35px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 12px;
+    }
+}
+
+/* Tablets / small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root{
+        --h2-size: 35px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 12px;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    :root{
+        --h2-size: 37px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 32px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 20px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 12px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    :root{
+        --h2-size: 40px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 35px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 23px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 13px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1441px) {
+    :root{
+        --h2-size: 53px; /* header to use when we want it to start feeling a lil big. ex: product titles */
+        --h3-size: 42px; /* medium sized "paragraph headers". ie "Jank" text in nav */
+        --h5-size: 28px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+        --p-size: 15px;
+    }
+}
+
+
+/* DOM breakpoint copy and paste */
+/* Extra small phones */
+@media (min-width: 376px) and (max-width: 480px) {
+}
+
+/* Phones */
+@media (min-width: 481px) and (max-width: 640px) {
+}
+
+/* Large phones / small tablets */
+@media (min-width: 641px) and (max-width: 768px) { 
+}
+
+/* Tablets / small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Desktops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+}
+
+/* Large desktops */
+@media (min-width: 1441px) {
+}
+

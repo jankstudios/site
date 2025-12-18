@@ -1,0 +1,38 @@
+html, body {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h2{
+/* header to use when we want it to start feeling a lil big. ex: product titles */
+    font-size: var(--h2-size);
+    font-weight: 550;
+}
+
+h3{ 
+/* medium sized "paragraph headers". ie "Jank" text in nav */
+    font-size: var(--h3-size);
+    font-weight: 400;
+}
+
+h5{ 
+/* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
+    font-size: var(--h5-size);
+    font-weight: 400;
+}
+
+p{
+    font-size: var(--p-size);
+    font-weight: 100;
+}

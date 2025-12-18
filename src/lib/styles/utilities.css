@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (min-width: 641px) { 
+    .flex-640px{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.pagemargin{
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
