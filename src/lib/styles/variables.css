@@ -3,6 +3,7 @@
     --h3-size: 3vw; /* medium sized "paragraph headers". ie "Jank" text in nav */
     --h5-size: 2vw; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
     --p-size: 1.15vw;
+    --size3: 0.85vw; /* currently used for classification text in nav */
 }
 
 /* Extra small phones */
@@ -11,7 +12,8 @@
         --h2-size: 35px; /* header to use when we want it to start feeling a lil big. ex: product titles */
         --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
-        --p-size: 12px;
+        --p-size: 14px;
+        --size3: 11.5px; /* currently used for classification text in nav */
     }
 }
 
@@ -22,6 +24,7 @@
         --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
         --p-size: 12px;
+        --size3: 10px; /* currently used for classification text in nav */
     }
 }
 
@@ -42,6 +45,7 @@
         --h3-size: 30px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 18.5px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
         --p-size: 12px;
+        --size3: 0.85vw; /* currently used for classification text in nav */
     }
 }
 
@@ -52,6 +56,7 @@
         --h3-size: 32px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 20px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
         --p-size: 12px;
+        --size3: 0.85vw; /* currently used for classification text in nav */
     }
 }
 
@@ -62,6 +67,7 @@
         --h3-size: 35px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 23px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
         --p-size: 13px;
+        --size3: 0.85vw; /* currently used for classification text in nav */
     }
 }
 
@@ -72,6 +78,7 @@
         --h3-size: 42px; /* medium sized "paragraph headers". ie "Jank" text in nav */
         --h5-size: 28px; /* small header text that barely has hierarchy over p. ie product label over product descriptor on main page */
         --p-size: 15px;
+        --size3: 0.85vw; /* currently used for classification text in nav */
     }
 }
 

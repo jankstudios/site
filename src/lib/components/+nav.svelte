@@ -57,23 +57,25 @@
     #asciibox{
         margin-left: 2.5vw;
         margin-right: 2vw;
+        /* background-color: red; */
+        height: 100%;
     }
 
     #asciilogo{
         font-family: "Noto Sans Mono", monospace;
-        font-size: .34vw;
+        font-size: calc(.2 * var(--p-size) + .02 * var(--h3-size));
         line-height: .8;
         /* color: blue; */
     }
 
     #classification{
-        font-size: .85vw;
+        font-size: calc(var(--p-size) * .75);
         font-weight: 350;
         color: grey;
     }
 
     #definition{
-        margin-top: .75vw;
+        margin-top: calc(0.5 * var(--p-size));
     }
 
     #menuitems{

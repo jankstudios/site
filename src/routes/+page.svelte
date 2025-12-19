@@ -3,7 +3,7 @@
 </script>
 
 <div class="pagemargin">
-    <div id="productparentbox" class="flex">
+    <div id="productparentbox">
         <div id="productchildbox">
             <a href="/mementomori">
                 <div class="productimgbox">
@@ -11,7 +11,7 @@
                 </div>
                 <br>
                 <h5>Memento Mori</h5>
-                <p>Goat Skull Lamp</p>
+                <p id="description">Goat Skull Lamp</p>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
@@ -23,14 +23,14 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="productchildbox">
+        <div id="productchildbox">
             <a href="">
                 <div class="productimgbox">
 
                 </div>
                 <br>
                 <h5>F-35S</h5>
-                <p>Combustion Powered Skateboard</p>
+                <p id="description">Combustion Powered Skateboard</p>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
@@ -41,7 +41,7 @@
                     <input type="submit" value="Pre-Order">
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <p id="yep">Yep, that's all I've got for now!</p>
@@ -49,42 +49,71 @@
 
 <style>
     #productparentbox{
-        /* background-color: red; */
+        display: flex;
+        align-items: flex-start;
+        gap: 2.5vw;
     }
 
     #productchildbox{
         /* background-color: yellow; */
-        width: 30vw;
+        width: 46.25vw;
     }
 
     .productimgbox{
-        width: 25vw;
-        height: 25vw;
+        width: 46.25vw;
+        height: 46.25vw;
         /* background-color: green; */
         /* border: 2px blue dashed; */
+    }
+
+    @media (min-width: 641px) { 
+        #productchildbox{
+            width: 30vw;
+        }
+
+        .productimgbox{
+            width: 30vw;
+            height: 30vw;
+            /* border: 2px blue dashed; */
+        }
     }
 
     #productimg{
         width: 100%;
     }
 
+    #description{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     #orderbox{
         margin-top: 1vh;
-        display: flex;
         /* background-color: yellow; */
+    }
+
+    @media (min-width: 641px) { 
+        #orderbox{
+            display: flex;
+        }
     }
 
     #pricebox{
         position: relative;
-        /* background-color: green; */
         width: 25%;
     }
 
     #price{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.75vw;
+        font-size: calc(var(--p-size) * 1.53);
+    }
+
+    @media (min-width: 641px) { 
+        #price{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);        
+        }
     }
 
     #yep{
