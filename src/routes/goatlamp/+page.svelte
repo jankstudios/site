@@ -14,12 +14,12 @@
   
 <div id="headerbox" class="flex-640px">
 {#if (width <= 640)}
-    <img id="currentpic" src={`/mementomori/${currentPic}`} alt=""/>
+    <img id="currentpic" src={`/goatlamp/${currentPic}`} alt=""/>
     <div class="micropics ">
         {#each images as img}
             <img
             class="micropic {currentPic === img ? 'active' : ''}"
-            src={`/mementomori/${img}`}
+            src={`/goatlamp/${img}`}
             alt=""
             on:mouseenter={() => changePic(img)}
             />
@@ -30,36 +30,35 @@
         {#each images as img}
         <img
             class="micropic {currentPic === img ? 'active' : ''}"
-            src={`/mementomori/${img}`}
+            src={`/goatlamp/${img}`}
             alt=""
             on:mouseenter={() => changePic(img)}
         />
         {/each}
     </div>
     
-    <img id="currentpic" src={`/mementomori/${currentPic}`} alt=""/>
+    <img id="currentpic" src={`/goatlamp/${currentPic}`} alt=""/>
 {/if}
 
     <div>
-        <h2>Memento Mori</h2>
-        <h5>Goat Skull Lamp</h5>
-        <br>
-        <h3>$666</h3>
+        <h2>Goat Lamp</h2>
+        <h5>$666</h5>
         <p id="status">Preorder - Ships in 16-20 weeks</p>
+        <br>
         <input type="number" min="1" max="9" value="1" />
         <input type="submit" value="Add To Cart">
         <input type="submit" value="Buy Now">
-        <br><br>
+        <br><br><br>
         <p>
-            Memento Mori is an industrial lamp/sculpture that uses a real goat skull as a light diffuser.
+            Goat Lamp is an industrial lamp/sculpture that uses a real goat skull as a light diffuser.
             <br><br>
             It gets about as bright as one of those salt lamps and is primarily constructed of 5051 aluminium, zinc-plated steel, and polycarbonate.
             <br><br>
             As of Jan 2026 it is completing package design devlopment and will ship when complete.
             <br><br>
-            Memento Mori is assembled in New Jersey with global materials.
+            Goat Lamp is assembled in New Jersey with global materials.
             <br><br>
-            Jank products undergo a continuous integration, continuous deployment cycle, so there may be small modifications to Memento Mori over time that improve the product.
+            Jank products undergo a continuous integration, continuous deployment cycle, so there may be small modifications to Goat Lamp over time that improve the product.
             <br><br>
             Dimensions: 16"W 16"H 14"L
             <br>

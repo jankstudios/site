@@ -47,7 +47,7 @@
 
 <style>
     nav{
-        width: 100vw;
+        width: 100%;
         /* background-color: red; */
         padding-top: 1vh;
         margin-bottom: 2.5vh;
@@ -55,7 +55,7 @@
     }
 
     #asciibox{
-        margin-left: 2.5vw;
+        margin-left: var(--pagemargin);
         margin-right: 2vw;
         /* background-color: red; */
         height: 100%;
@@ -81,7 +81,7 @@
     #menuitems{
         position: absolute;
         top: 1vh;
-        right: 2.5vw;
+        right: var(--pagemargin);
         /* background-color: green; */
     }
 

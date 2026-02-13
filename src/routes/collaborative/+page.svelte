@@ -3,12 +3,16 @@
 </script>
 
 <div id="body">
-    <p>Jank takes on select client projects. Our small team can deploy hardware, software, and marketing campaigns. Email <a href="mailto:hello@jank.so">collaborative@jank.so</a> to collaborate :)</p>
+    <p>Jank takes on select client projects. Our small team deploys hardware, software, and marketing campaigns. We operate anywhere from ideation to launch.</p>
+
+    <br>
+
+    <p><a href="mailto:hello@jank.so">collaborative@jank.so</a></p>
 </div>
 
 <style>
     #body{
-        padding-left: 2.5vw;
+        padding-left: var(--pagemargin);
         padding-right: 30vw;
     }
 </style>

@@ -49,7 +49,7 @@
 <style>
     footer{
         position: relative;
-        padding: 2.5vw;
+        padding: var(--pagemargin);
         height: 40vh;
         background-color: lightgray;
         line-height: calc(2 * var(--p-size));
