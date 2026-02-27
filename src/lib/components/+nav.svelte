@@ -50,7 +50,7 @@
         width: 100%;
         /* background-color: red; */
         padding-top: 1vh;
-        margin-bottom: 2.5vh;
+        margin-bottom: 5vh;
         position: relative;
     }
 

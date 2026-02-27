@@ -1,3 +1,20 @@
+<script>
+    function handleSubmit(e) {
+        const input = document.querySelector('input[name="entry.2136646451"]');
+        
+        // Convert to digits only before submission
+        input.value = input.value.replace(/\D/g, '');
+
+        if (input.value.length < 10) {
+            alert("Hmm... Not understanding that number. Try again?");
+            e.preventDefault();
+            return false;
+        }
+
+        alert("Thanks! You'll be the first to know any exciting things happening :)");
+    }
+</script>
+
 <footer>
     <div id="footerflex" class="flex-640px">
 
@@ -38,11 +55,22 @@
             </div>
         </div>
 
-        <div>
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSc27pBlJFiyhGYJZhtDHKSGxvznhbNWCRcBimDVFXJ-hJRH_w/formResponse"
+            method="POST"
+            target="hidden_iframe"
+            on:submit={handleSubmit()}
+        >
             <p>Stay updated, enter your phone number:</p>
-            <input type="text">
-            <input type="submit">
-        </div>
+            <input
+                type="tel"
+                name="entry.2136646451"
+                required
+            >
+            <input type="submit" value="Submit">
+
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </form>
     </div>
 </footer>
 
@@ -50,7 +78,7 @@
     footer{
         position: relative;
         padding: var(--pagemargin);
-        height: 40vh;
+        height: 50vh;
         background-color: lightgray;
         line-height: calc(2 * var(--p-size));
         margin-top: 10vh;

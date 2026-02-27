@@ -3,14 +3,19 @@
     align-items: flex-start;
 }
 
+.pagemargin{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
 @media (min-width: 641px) { 
     .flex-640px{
         display: flex;
         align-items: flex-start;
     }
-}
 
-.pagemargin{
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    .pagemargin{
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
 }

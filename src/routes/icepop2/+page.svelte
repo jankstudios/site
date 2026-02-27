@@ -46,8 +46,12 @@
         <p id="status">Preorder - Ships in 16-20 weeks</p>
         <br>
         <input type="number" min="1" max="9" value="1" />
-        <input type="submit" value="Add To Cart">
-        <input type="submit" value="Buy Now">
+        <!-- <input type="submit" value="Add To Cart"> -->
+        <input
+            type="submit"
+            value="Buy Now"
+            on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
+        >
         <br><br><br>
         <p>
             Memento Mori is an industrial lamp/sculpture that uses a real goat skull as a light diffuser.
