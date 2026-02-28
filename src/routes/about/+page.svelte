@@ -5,7 +5,7 @@
 <div id="body">
     <h5>What is Jank?</h5>
     <br>
-    <p>Jank is a design practice that makes objects and sells them online. Jank "products" are half practical, half artistic. It's just fun things that make us happy :&#41;</p>
+    <p>Jank is a design practice that makes objects and sells them online. Jank "products" are mostly artistic, sometimes practical. It's just fun things that make us happy :&#41;</p>
     <br>
     <p>-------------------------</p>
     <br>

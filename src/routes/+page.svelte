@@ -1,5 +1,50 @@
-<script>
+<script lang="ts">
+    let qty_icepop = 1;
 
+    async function buy(sku: string, qty: number) {
+        // basic sanity
+        const quantity = Math.max(1, Math.min(99, Number(qty) || 1));
+    
+        // Only show warning for ICE Pop variants
+        const WARNING_SKUS = new Set([
+            "ICEPOP",
+            "ICEPOP_X2",
+            "ICEPOP_W_STAND",
+            "ICEPOP_W_STAND_X2",
+            "ICEPOP_STAND"
+        ]);
+
+        if (WARNING_SKUS.has(sku)) {
+            alert(
+                "Before you buy:\n\n" +
+                "Understand that any unintended use of ICE Pop can cause serious damage.\n" +
+                "ICE Pop is a satirical art piece, but the steel packaged inside is very real.\n" +
+                "At best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\n" +
+                "The only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer."
+            );
+        }
+    
+        const res = await fetch("/api/checkout", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ sku, quantity })
+        });
+    
+        if (!res.ok) {
+            const msg = await res.text();
+            alert("Checkout failed. Please try again.\n\n" + msg);
+            return;
+        }
+    
+        const { url } = await res.json();
+        window.location.href = url; // redirect to Stripe-hosted checkout
+    }
+
+    import { page } from '$app/stores';
+
+    $: if ($page.url.searchParams.get('checkout') === 'success') {
+        alert("Order received. Thank you.");
+    }
 </script>
 
 <div class="pagemargin">
@@ -17,37 +62,21 @@
                     <h5 id="price">$666</h5>
                 </div>
                 <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        value="1"
+                    />                    
                     <input type="submit" value="Pre-Order">
                 </div>
             </div>
         </div>
+
         <div id="productchildbox">
             <a href="/icepop">
                 <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
-                </div>
-                <br>
-                <h5>ICE Pop (2 Pack)</h5>
-            </a>
-            <div id="orderbox">
-                <div id="pricebox">
-                    <h5 id="price">$49.99</h5>
-                </div>
-                <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
-                    <input
-                        type="submit" 
-                        value="Buy Now" 
-                        on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
-                    >
-                </div>
-            </div>
-        </div>
-        <div id="productchildbox">
-            <a href="/icepop">
-                <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
+                    <img id="productimg" src="/icepop/1.PNG" alt="">
                 </div>
                 <br>
                 <h5>ICE Pop</h5>
@@ -57,63 +86,109 @@
                     <h5 id="price">$29.99</h5>
                 </div>
                 <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        bind:value={qty_icepop}
+                    />
                     <input 
                         type="submit" 
                         value="Buy Now"
-                        on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
+                        on:click={() => buy("ICEPOP", qty_icepop)}
                     >
                 </div>
             </div>
         </div>
+
         <div id="productchildbox">
-            <a href="/icepop">
+            <a href="/icepop2">
                 <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
+                    <img id="productimg" src="/icepop2/1.PNG" alt="">
                 </div>
                 <br>
-                <h5>ICE Pop With Stand (2 Pack)</h5>
+                <h5>ICE Pop (x2)</h5>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
-                    <h5 id="price">$69.99</h5>
+                    <h5 id="price">$49.99</h5>
                 </div>
                 <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        value="1"
+                    />
                     <input 
                         type="submit" 
                         value="Buy Now"
-                        on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
+                        on:click={() => buy("ICEPOP_X2", qty_icepop)}
                     >
                 </div>
             </div>
         </div>
+
         <div id="productchildbox">
-            <a href="/icepop">
+            <a href="/icepopwithstand">
                 <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
+                    <img id="productimg" src="/icepopwstand/1.PNG" alt="">
                 </div>
                 <br>
-                <h5>ICE Pop With Stand</h5>
+                <h5>ICE Pop w/ Stand</h5>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
                     <h5 id="price">$44.99</h5>
                 </div>
                 <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        value="1"
+                    />                    
                     <input 
                         type="submit" 
                         value="Buy Now"
-                        on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
+                        on:click={() => buy("ICEPOP_W_STAND", qty_icepop)}
                     >
                 </div>
             </div>
         </div>
+
         <div id="productchildbox">
-            <a href="/icepop">
+            <a href="/icepopwithstand2">
                 <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
+                    <img id="productimg" src="/icepopwstand2/1.PNG" alt="">
+                </div>
+                <br>
+                <h5>ICE Pop w/ Stand (x2)</h5>
+            </a>
+            <div id="orderbox">
+                <div id="pricebox">
+                    <h5 id="price">$69.99</h5>
+                </div>
+                <div id="buttons">
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        value="1"
+                    />                    
+                    <input 
+                        type="submit" 
+                        value="Buy Now"
+                        on:click={() => buy("ICEPOP_W_STAND_X2", qty_icepop)}
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="productchildbox">
+            <a href="/icepopstand">
+                <div class="productimgbox">
+                    <img id="productimg" src="/icepopstand/1.PNG" alt="">
                 </div>
                 <br>
                 <h5>ICE Pop Stand</h5>
@@ -123,10 +198,16 @@
                     <h5 id="price">$19.99</h5>
                 </div>
                 <div id="buttons">
-                    <input type="number" min="1" max="9" value="1" />
+                    <input
+                        type="number" 
+                        min="1" 
+                        max="99" 
+                        value="1"
+                    />                    
                     <input 
                         type="submit" 
                         value="Buy Now"
+                        on:click={() => buy("ICEPOP_STAND", qty_icepop)}
                     >
                 </div>
             </div>

@@ -1,12 +1,54 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.jpeg", "2.png", "3.jpg", "4.png", "5.png", "6.png", "7.png"];
+    const images = ["1.PNG", "2.PNG"];
     let currentPic = images[0];
   
     const changePic = (file) => {
       currentPic = file;
     };
+
+    let productqty = 1;
+    let isCheckingOut = false;
+    let checkoutError = "";
+
+    async function buy() {
+        checkoutError = "";
+
+        // basic sanity
+        const quantity = Math.max(1, Math.min(99, Number(productqty) || 1));
+
+        try {
+            isCheckingOut = true;
+
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({ sku: "ICEPOP_STAND", quantity })
+            });
+
+            if (!res.ok) {
+                const msg = await res.text();
+                checkoutError = msg || "Checkout failed. Please try again.";
+                alert("Checkout failed. Please try again.\n\n" + checkoutError);
+                return;
+            }
+
+            const data = await res.json();
+            if (!data?.url) {
+                checkoutError = "Checkout failed: missing redirect URL.";
+                alert(checkoutError);
+                return;
+            }
+
+            window.location.href = data.url;
+        } catch (e) {
+            checkoutError = "Checkout failed due to a network or server error.";
+            alert(checkoutError);
+        } finally {
+            isCheckingOut = false;
+        }
+    }
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -14,12 +56,12 @@
   
 <div id="headerbox" class="flex-640px">
     <div>
-        <img id="currentpic" src={`/icepop/${currentPic}`} alt=""/>
+        <img id="currentpic" src={`/icepopstand/${currentPic}`} alt=""/>
         <div class="micropics">
             {#each images as img}
                 <img
                     class="micropic {currentPic === img ? 'active' : ''}"
-                    src={`/icepop/${img}`}
+                    src={`/icepopstand/${img}`}
                     alt=""
                     on:mouseenter={() => changePic(img)}
                     on:click={() => changePic(img)}
@@ -30,56 +72,36 @@
     </div>
 
     <div>
-        <h2>ICE Pop</h2>
-        <h5>$34.99</h5>
+        <h2>ICE Pop Stand</h2>
+        <h5>$19.99</h5>
         <p id="status">Preorder - Ships in 4-8 weeks</p>
         <br>
-        <input type="number" min="1" max="9" value="1" />
+        <input
+            type="number"
+            min="1"
+            max="99"
+            bind:value={productqty}
+        />      
         <!-- <input type="submit" value="Add To Cart"> -->
-        <input type="submit" value="Buy Now">
+        <input
+            type="button"
+            value={isCheckingOut ? "Redirecting..." : "Buy Now"}
+            disabled={isCheckingOut}
+            on:click={buy}
+        >
         <br><br><br>
         <p>
-            ICE Pop is an art piece that supports the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>.
+            This is a stand to display your ICE Pop.
             <br><br>
-            2/3 of profits go to NIJC. 1/3 helps us continue making projects like these.
+            Made with powder coated aluminium.
             <br><br>
-            Each ICE Pop includes:
-            <br>
-            - 20 stainless steel tabs that assemble into 10 spikes
-            <br>
-            - 12 rubber bands for spike assembly
-            <br>
-            - A popsicle stick with an ICE related joke
-            <br>
-            - Packaging with some ICE factoids
+            Manufactured in Kentucky, Nevada, and Texas, USA.
             <br><br>
-            You might get a SUPER MEGA RARE GOLDEN ICE POP when you purchase!
+            Dimensions: 2.5"W 2.5"H 3.5"L
+            <br>
+            Weight: 0.2 lbs
             <br><br>
-            Every part of ICE Pop is made in America.
-            <br>
-            - Design: New Jersey
-            <br>
-            - Spikes: Nevada, Kentucky, Texas
-            <br>
-            - Popsicle Stick: Nevada, Kentucky, Texas, New Jersey
-            <br>
-            - Rubber Band: Wisconsin
-            <br>
-            - Bread Tie: Minnesota
-            <br>
-            - Packaging: New Jersey, Texas
-            <br>
-            - Final assembly: New Jersey
-            <br><br>
-            ICE Pop is available until April 1, 2025.
-            <br><br>
-            Dimensions: 16"W 16"H 14"L
-            <br>
-            Weight: 15 lbs
-            <br><br>
-            ICE Pop is designed as an art piece for display only. Jank is not responsible for results of any unintended use or misuse caused by ICE Pop.
-            <br><br>
-            To directly donate to NIJC, click <a href="https://immigrantjustice.salsalabs.org/donate-26/index.html">here</a>.
+            To donate to NIJC, click <a href="https://immigrantjustice.salsalabs.org/donate-26/index.html">here</a>.
         </p>
     </div>
 </div>

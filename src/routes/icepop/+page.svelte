@@ -1,12 +1,62 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.jpeg", "2.png", "3.jpg", "4.png", "5.png", "6.png", "7.png"];
+    const images = ["1.PNG", "2.PNG"];
     let currentPic = images[0];
   
     const changePic = (file) => {
       currentPic = file;
     };
+
+    let productqty = 1;
+    let isCheckingOut = false;
+    let checkoutError = "";
+
+    async function buy() {
+        checkoutError = "";
+
+        // basic sanity
+        const quantity = Math.max(1, Math.min(99, Number(productqty) || 1));
+
+        alert(
+            "Before you buy:\n\n" +
+            "Understand that any unintended use of ICE Pop can cause serious damage.\n" +
+            "ICE Pop is a satirical art piece, but the steel packaged inside is very real.\n" +
+            "At best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\n" +
+            "The only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer."
+        );
+
+        try {
+            isCheckingOut = true;
+
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({ sku: "ICEPOP", quantity })
+            });
+
+            if (!res.ok) {
+                const msg = await res.text();
+                checkoutError = msg || "Checkout failed. Please try again.";
+                alert("Checkout failed. Please try again.\n\n" + checkoutError);
+                return;
+            }
+
+            const data = await res.json();
+            if (!data?.url) {
+                checkoutError = "Checkout failed: missing redirect URL.";
+                alert(checkoutError);
+                return;
+            }
+
+            window.location.href = data.url;
+        } catch (e) {
+            checkoutError = "Checkout failed due to a network or server error.";
+            alert(checkoutError);
+        } finally {
+            isCheckingOut = false;
+        }
+    }
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -34,24 +84,28 @@
         <h5>$34.99</h5>
         <p id="status">Preorder - Ships in 4-8 weeks</p>
         <br>
-        <input type="number" min="1" max="9" value="1" />
+        <input
+            type="number"
+            min="1"
+            max="99"
+            bind:value={productqty}
+        />      
         <!-- <input type="submit" value="Add To Cart"> -->
         <input
-            type="submit"
-            value="Buy Now"
-            on:click={alert("Before you buy:\n\nUnderstand that any unintended use of ICE Pop can cause serious damage.\nICE Pop is a satirical art piece, but the steel packaged inside is very real.\nAt best, it will ruin your neighbor's day. At worst, it will seriously hurt someone.\nThe only intended use of ICE Pop is as a sculptural display and all responsibility for use of ICE Pop after purchase rests on the customer.")}
+            type="button"
+            value={isCheckingOut ? "Redirecting..." : "Buy Now"}
+            disabled={isCheckingOut}
+            on:click={buy}
         >
         <br><br><br>
         <p>
             ICE Pop is an art piece that supports the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>.
             <br><br>
-            2/3 of profits go to NIJC. 1/3 helps us continue making projects like these.
-            <br><br>
             Each ICE Pop includes:
             <br>
-            - 20 stainless steel tabs that assemble into 10 spikes
+            - 20 steel tabs that assemble into 10 spikes
             <br>
-            - 12 rubber bands for spike assembly
+            - 11 rubber bands for spike assembly
             <br>
             - A popsicle stick with an ICE related joke
             <br>
@@ -77,9 +131,9 @@
             <br><br>
             ICE Pop is available until April 1, 2025.
             <br><br>
-            Dimensions: 16"W 16"H 14"L
+            Dimensions: 2"W 2"H 6.5"L
             <br>
-            Weight: 15 lbs
+            Weight: 1 lbs
             <br><br>
             ICE Pop is designed as an art piece for display only. Jank is not responsible for results of any unintended use or misuse caused by ICE Pop.
             <br><br>
