@@ -1,7 +1,7 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.PNG", "2.PNG"];
+    const images = ["1.png", "2.png"];
     let currentPic = images[0];
   
     const changePic = (file) => {

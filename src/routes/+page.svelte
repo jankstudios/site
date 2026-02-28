@@ -76,7 +76,7 @@
         <div id="productchildbox">
             <a href="/icepop">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepop/1.PNG" alt="">
+                    <img id="productimg" src="/icepop/1.png" alt="">
                 </div>
                 <br>
                 <h5>ICE Pop</h5>
