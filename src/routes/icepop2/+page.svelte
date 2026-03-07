@@ -64,13 +64,13 @@
   
 <div id="headerbox" class="flex-640px">
     <div>
-        <img id="currentpic" src={`/icepop2/${currentPic}`} alt=""/>
+        <img id="currentpic" src={`/icepop2/${currentPic}`} alt="2x ICE Pop Image"/>
         <div class="micropics">
             {#each images as img}
                 <img
                     class="micropic {currentPic === img ? 'active' : ''}"
                     src={`/icepop2/${img}`}
-                    alt=""
+                    alt="2x ICE Pop Image"
                     on:mouseenter={() => changePic(img)}
                     on:click={() => changePic(img)}
                 />
@@ -82,7 +82,7 @@
     <div>
         <h2>ICE Pop (x2)</h2>
         <h5>$49.99</h5>
-        <p id="status">Preorder - Ships in 4-8 weeks</p>
+        <p id="status">Made To Order - Ships in 4-8 weeks</p>
         <br>
         <input
             type="number"
@@ -99,7 +99,8 @@
         >
         <br><br><br>
         <p>
-            ICE Pop is an art piece that supports the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>. This item includes 2 ICE Pops.
+            ICE Pop is a satirical art piece. 100% of profits support the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>.
+            This item includes 2 ICE Pops.
             <br><br>
             Each ICE Pop includes:
             <br>

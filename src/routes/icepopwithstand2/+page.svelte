@@ -65,13 +65,13 @@
   
 <div id="headerbox" class="flex-640px">
     <div>
-        <img id="currentpic" src={`/icepopwstand2/${currentPic}`} alt=""/>
+        <img id="currentpic" src={`/icepopwstand2/${currentPic}`} alt="2x ICE Pop With Stand Image"/>
         <div class="micropics">
             {#each images as img}
                 <img
                     class="micropic {currentPic === img ? 'active' : ''}"
                     src={`/icepopwstand2/${img}`}
-                    alt=""
+                    alt="2x ICE Pop With Stand Image"
                     on:mouseenter={() => changePic(img)}
                     on:click={() => changePic(img)}
                 />
@@ -83,7 +83,7 @@
     <div>
         <h2>ICE Pop w/ Stand (x2)</h2>
         <h5>$69.99</h5>
-        <p id="status">Preorder - Ships in 4-8 weeks</p>
+        <p id="status">Made To Order - Ships in 4-8 weeks</p>
         <br>
         <input
             type="number"
@@ -104,7 +104,7 @@
             <br><br>
             -------------------------
             <br><br>
-            ICE Pop is an art piece that supports the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>.
+            ICE Pop is a satirical art piece. 100% of ICE Pop profits support the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>. ICE Pop stand profits go towards more work like this.
             <br><br>
             Each ICE Pop includes:
             <br>

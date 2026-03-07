@@ -64,7 +64,7 @@
     #asciilogo{
         font-family: "Noto Sans Mono", monospace;
         font-size: calc(.2 * var(--p-size) + .02 * var(--h3-size));
-        line-height: 0.9;
+        line-height: 0.85;
         /* color: blue; */
     }
 

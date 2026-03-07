@@ -52,7 +52,7 @@
         <div id="productchildbox" class="upcoming" on:click={() => alert("Pssst... So impatient! This product is coming sooner than you think.")}>
             <a href="">
                 <div class="productimgbox">
-                    <img id="productimg" src="/goatlamp/1.png" alt="">
+                    <img id="productimg" src="/goatlamp/1.png" alt="Goat Lamp">
                 </div>
                 <br>
                 <h5>Goat Lamp</h5>
@@ -107,7 +107,7 @@
                     <img id="productimg" src="/icepop2/icepop2.webp" alt="2 ICE Pops">
                 </div>
                 <br>
-                <h5>ICE Pop (x2)</h5>
+                <h5>2x ICE Pop</h5>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
@@ -160,10 +160,10 @@
         <div id="productchildbox">
             <a href="/icepopwithstand2">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepopwstand2/icepopwstand2.webp" alt="">
+                    <img id="productimg" src="/icepopwstand2/icepopwstand2.webp" alt="2 ICE Pops With Stands">
                 </div>
                 <br>
-                <h5>ICE Pop w/ Stand (x2)</h5>
+                <h5>2x ICE Pop w/ Stand</h5>
             </a>
             <div id="orderbox">
                 <div id="pricebox">
@@ -188,7 +188,7 @@
         <div id="productchildbox">
             <a href="/icepopstand">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepopstand/stand.webp" alt="">
+                    <img id="productimg" src="/icepopstand/stand.webp" alt="ICE Pop Stand">
                 </div>
                 <br>
                 <h5>ICE Pop Stand</h5>

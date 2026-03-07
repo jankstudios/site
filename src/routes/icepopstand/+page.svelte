@@ -56,13 +56,13 @@
   
 <div id="headerbox" class="flex-640px">
     <div>
-        <img id="currentpic" src={`/icepopstand/${currentPic}`} alt=""/>
+        <img id="currentpic" src={`/icepopstand/${currentPic}`} alt="ICE Pop Stand Image"/>
         <div class="micropics">
             {#each images as img}
                 <img
                     class="micropic {currentPic === img ? 'active' : ''}"
                     src={`/icepopstand/${img}`}
-                    alt=""
+                    alt="ICE Pop Stand Image"
                     on:mouseenter={() => changePic(img)}
                     on:click={() => changePic(img)}
                 />
@@ -74,7 +74,7 @@
     <div>
         <h2>ICE Pop Stand</h2>
         <h5>$19.99</h5>
-        <p id="status">Preorder - Ships in 4-8 weeks</p>
+        <p id="status">Made To Order - Ships in 4-8 weeks</p>
         <br>
         <input
             type="number"
