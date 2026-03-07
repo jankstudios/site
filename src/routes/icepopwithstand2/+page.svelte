@@ -104,7 +104,7 @@
             <br><br>
             -------------------------
             <br><br>
-            ICE Pop is a satirical art piece. 100% of ICE Pop profits support the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>. ICE Pop stand profits go towards more work like this.
+            ICE Pop is a satirical art piece. 100% of ICE Pop profits support the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>. ICE Pop Stand profits go towards more work like this.
             <br><br>
             Each ICE Pop includes:
             <br>
