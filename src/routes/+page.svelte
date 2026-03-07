@@ -50,7 +50,7 @@
 <div class="pagemargin">
     <div id="productparentbox">
         <div id="productchildbox" class="upcoming" on:click={() => alert("Pssst... So impatient! This product is coming sooner than you think.")}>
-            <a href="/goatlamp">
+            <a href="">
                 <div class="productimgbox">
                     <img id="productimg" src="/goatlamp/1.png" alt="">
                 </div>
@@ -294,7 +294,7 @@
 
     #orderbox{
         margin-top: 1vh;
-        display: flex;
+        display: block;
     }
 
     @media (min-width: 641px) { 
@@ -302,6 +302,11 @@
             display: flex;
         }
     }
+
+    #buttons{
+            padding-top: var(--p-size);
+            /* background-color: red; */
+        }
 
     #pricebox{
         position: relative;
@@ -313,9 +318,6 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);        
-    }
-
-    #buttons{
     }
 
     #yep{

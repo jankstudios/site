@@ -84,7 +84,7 @@
         />      
         <!-- <input type="submit" value="Add To Cart"> -->
         <input
-            type="button"
+            type="submit"
             value={isCheckingOut ? "Redirecting..." : "Buy Now"}
             disabled={isCheckingOut}
             on:click={buy}
