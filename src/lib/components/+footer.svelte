@@ -109,8 +109,14 @@
     pre{
         font-family: "Noto Sans Mono", monospace;
         font-size: calc(var(--p-size) * .31);
-        line-height: .8;
+        line-height: .1;
         color: blue;
+    }
+
+    @media (min-width: 641px) { 
+        pre{
+            line-height: .8;
+        }
     }
 
     #links{
