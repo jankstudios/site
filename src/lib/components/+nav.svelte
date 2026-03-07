@@ -2,39 +2,39 @@
     <div class="flex">
         <div id="asciibox">
             <a href="/">
-                <p id="asciilogo">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_========_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_===.........@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_====............@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    &nbsp;&nbsp;&nbsp;_===................@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@@@@%........._===&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@@@@@....._====_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@..@@..@@.._===....@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@..@@..@@===........@_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@..............._=====_&nbsp;&nbsp;<br>
-                    @@@@@@@..........._===......@&nbsp;<br>
-                    @@...@@@......._===..........@<br>
-                    @@....@@@..._===.............@<br>
-                    @@@@==&nbsp;@@@@@@@@..............@<br>
-                    %@@@&nbsp;&nbsp;&nbsp;&nbsp;@@@@@@@@..........._@&nbsp;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_==@@%..%@@........_===&nbsp;&nbsp;<br>
-                    &nbsp;&nbsp;_===..@@....@@....._===&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    %@@@....@@%..%@@.._===&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@....@@@@@@@@===.@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@.....@@@@@@@@....@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@....@@@.........@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@@@.........@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@@........_@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@@....._===&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@@..._===&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    @@@@_====&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    *@@==&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                </p>
+                <pre id="asciilogo">
+             _========_       
+          _===.........@      
+      _====............@      
+   _===................@      
+@@@@@@@@@%........._===       
+@@@@@@@@@@....._====_         
+@@..@@..@@.._===....@         
+@@..@@..@@===........@_       
+@@@@@@..............._=====_  
+@@@@@@@..........._===......@ 
+@@...@@@......._===..........@
+@@....@@@..._===.............@
+@@@@== @@@@@@@@..............@
+%@@@    @@@@@@@@..........._@ 
+     _==@@%..%@@........_===  
+  _===..@@....@@....._===     
+%@@@....@@%..%@@.._===        
+@@@@....@@@@@@@@===.@         
+@@.....@@@@@@@@....@          
+@@....@@@.........@           
+@@@@@@@@.........@            
+@@@@@@@........_@             
+@@@@@@....._===               
+@@@@@..._===                  
+@@@@_====                     
+*@@==                         
+</pre>
             </a>
         </div>
         <div>
             <a href="/"><h3>Jank</h3></a>
-            <p id="classification">adjective &nbsp; /ˈjaNGk/</p>
+            <p id="classification">adjective   /ˈjaNGk/</p>
             <p id="definition">Of extremely poor or unreliable quality.</p>
         </div>        
     </div>
