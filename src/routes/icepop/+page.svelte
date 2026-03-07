@@ -1,7 +1,7 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.png", "2.png"];
+    const images = ["icepop.webp", "openicepop.webp", "spikes.webp", "popsicle.webp", "nutrition.webp", "components.webp"];
     let currentPic = images[0];
   
     const changePic = (file) => {
@@ -117,9 +117,9 @@
             <br>
             - Design: New Jersey
             <br>
-            - Spikes: Nevada, Kentucky, Texas
+            - Spikes: Texas
             <br>
-            - Popsicle Stick: Nevada, Kentucky, Texas, New Jersey
+            - Popsicle Stick: Kentucky, New Jersey
             <br>
             - Rubber Band: Wisconsin
             <br>
@@ -129,7 +129,7 @@
             <br>
             - Final assembly: New Jersey
             <br><br>
-            ICE Pop is available until April 1, 2025.
+            ICE Pop is available until April 1, 2026.
             <br><br>
             Dimensions: 2"W 2"H 6.5"L
             <br>

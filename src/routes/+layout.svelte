@@ -13,7 +13,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+	<title>Jank</title>
+	<meta name="description" content="Jank is a real company that makes legitimate objects. ICE Pops out now.">
 </svelte:head>
 
 <div class="page">

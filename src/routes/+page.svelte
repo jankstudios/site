@@ -76,7 +76,7 @@
         <div id="productchildbox">
             <a href="/icepop">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepop/1.png" alt="">
+                    <img id="productimg" src="/icepop/icepop.webp" alt="ICE Pop">
                 </div>
                 <br>
                 <h5>ICE Pop</h5>
@@ -104,7 +104,7 @@
         <div id="productchildbox">
             <a href="/icepop2">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepop2/1.PNG" alt="">
+                    <img id="productimg" src="/icepop2/icepop2.webp" alt="2 ICE Pops">
                 </div>
                 <br>
                 <h5>ICE Pop (x2)</h5>
@@ -132,7 +132,7 @@
         <div id="productchildbox">
             <a href="/icepopwithstand">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepopwstand/1.PNG" alt="">
+                    <img id="productimg" src="/icepopwstand/icepopwstand.webp" alt="ICE Pop with stand">
                 </div>
                 <br>
                 <h5>ICE Pop w/ Stand</h5>
@@ -160,7 +160,7 @@
         <div id="productchildbox">
             <a href="/icepopwithstand2">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepopwstand2/1.PNG" alt="">
+                    <img id="productimg" src="/icepopwstand2/icepopwstand2.webp" alt="">
                 </div>
                 <br>
                 <h5>ICE Pop w/ Stand (x2)</h5>
@@ -188,7 +188,7 @@
         <div id="productchildbox">
             <a href="/icepopstand">
                 <div class="productimgbox">
-                    <img id="productimg" src="/icepopstand/1.PNG" alt="">
+                    <img id="productimg" src="/icepopstand/stand.webp" alt="">
                 </div>
                 <br>
                 <h5>ICE Pop Stand</h5>

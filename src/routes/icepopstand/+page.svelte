@@ -1,7 +1,7 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.PNG", "2.PNG"];
+    const images = ["stand.webp", "icepopwstand.webp", "stand_sideview.webp", "stand_topview.webp", "components.webp"];
     let currentPic = images[0];
   
     const changePic = (file) => {

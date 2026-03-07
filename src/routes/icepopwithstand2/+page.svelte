@@ -1,7 +1,7 @@
 <script lang="ts">
     let width;
 
-    const images = ["1.PNG"];
+    const images = ["icepopwstand2.webp", "openicepop.webp", "spikes.webp", "popsicle.webp", "nutrition.webp", "stand.webp", "stand_sideview.webp", "stand_topview.webp", "components.webp"];
     let currentPic = images[0];
   
     const changePic = (file) => {
@@ -134,7 +134,7 @@
             <br>
             - Final assembly: New Jersey
             <br><br>
-            ICE Pop is available until April 1, 2025.
+            ICE Pop is available until April 1, 2026.
             <br><br>
             Dimensions: 2"W 2"H 6.5"L
             <br>
