@@ -122,9 +122,9 @@
             <br>
             - Design: New Jersey
             <br>
-            - Spikes: Nevada, Kentucky, Texas
+            - Spikes: Texas
             <br>
-            - Popsicle Stick: Nevada, Kentucky, Texas, New Jersey
+            - Popsicle Stick: Kentucky, New Jersey
             <br>
             - Rubber Band: Wisconsin
             <br>
@@ -146,7 +146,7 @@
             <br><br>
             Made with powder coated aluminium.
             <br><br>
-            Manufactured in Kentucky, Nevada, and Texas, USA.
+            Manufactured in Kentucky.
             <br><br>
             Dimensions: 2.5"W 2.5"H 3.5"L
             <br>

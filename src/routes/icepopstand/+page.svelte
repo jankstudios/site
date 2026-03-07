@@ -95,7 +95,7 @@
             <br><br>
             Made with powder coated aluminium.
             <br><br>
-            Manufactured in Kentucky, Nevada, and Texas, USA.
+            Manufactured in Kentucky.
             <br><br>
             Dimensions: 2.5"W 2.5"H 3.5"L
             <br>
