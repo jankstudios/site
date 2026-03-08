@@ -109,7 +109,7 @@
     pre{
         font-family: "Noto Sans Mono", monospace;
         font-size: calc(var(--p-size) * .31);
-        line-height: 0.85;
+        line-height: 0.9;
         color: blue;
     }
 
