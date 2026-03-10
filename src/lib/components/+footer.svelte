@@ -45,7 +45,7 @@
         <div id="links">
             <div>
                 <a href="https://www.instagram.com/jankjankjankjankjankjank/"><p>Instagram</p></a>
-                <a href=""><p>TikTok</p></a>
+                <a href="https://www.tiktok.com/@jankjankjankjankjankjank?_r=1&_t=ZP-94YfKDjNvY7"><p>TikTok</p></a>
                 <a href="mailto:hello@jank.so"><p>hello@jank.so</p></a>
             </div>
             <div>  

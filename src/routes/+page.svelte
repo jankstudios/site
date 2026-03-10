@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { page } from '$app/state';
+    import { browser } from '$app/environment';
+
     let qty_icepop = 1;
 
     async function buy(sku: string, qty: number) {
@@ -40,11 +43,11 @@
         window.location.href = url; // redirect to Stripe-hosted checkout
     }
 
-    import { page } from '$app/stores';
-
-    $: if ($page.url.searchParams.get('checkout') === 'success') {
-        alert("Order received. Thank you.");
-    }
+    $effect(() => {
+        if (browser && page.url.searchParams.get('checkout') === 'success') {
+            alert("Thanks for your order! We're making your product right now and it'll ship in 6-8 weeks :)");
+        }
+    });
 </script>
 
 <div class="pagemargin">
@@ -304,9 +307,14 @@
     }
 
     #buttons{
-            padding-top: var(--p-size);
-            /* background-color: red; */
+        padding-top: var(--p-size);
+    }
+
+    @media (min-width: 641px) { 
+        #buttons{
+            padding-top: 0;
         }
+    }
 
     #pricebox{
         position: relative;

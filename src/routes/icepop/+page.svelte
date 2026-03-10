@@ -82,7 +82,7 @@
     <div>
         <h2>ICE Pop</h2>
         <h5>$34.99</h5>
-        <p id="status">Made To Order - Ships in 4-8 weeks</p>
+        <p id="status">Made To Order - Ships in 6-8 weeks</p>
         <br>
         <input
             type="number"
