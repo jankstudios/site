@@ -134,7 +134,7 @@
             <br>
             - Final assembly: New Jersey
             <br><br>
-            ICE Pop is available until April 1, 2026.
+            ICE Pop is available until May 1, 2026.
             <br><br>
             Dimensions: 2"W 2"H 6.5"L
             <br>
