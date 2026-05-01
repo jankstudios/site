@@ -82,22 +82,22 @@
     <div>
         <h2>ICE Pop (x2)</h2>
         <h5>$49.99</h5>
-        <p id="status">Made To Order - Ships in 6-8 weeks</p>
+        <p id="status" class="soldout">SOLD OUT</p>
         <br>
-        <input
+        <!-- <input
             type="number"
             min="1"
             max="99"
             bind:value={productqty}
-        />      
+        />       -->
         <!-- <input type="submit" value="Add To Cart"> -->
-        <input
+        <!-- <input
             type="submit"
             value={isCheckingOut ? "Redirecting..." : "Buy Now"}
             disabled={isCheckingOut}
             on:click={buy}
-        >
-        <br><br><br>
+        > -->
+        <!-- <br><br><br> -->
         <p>
             ICE Pop is a satirical art piece. 100% of profits support the <a href="https://immigrantjustice.org/">National Immigrant Justice Center</a>.
             This item includes 2 ICE Pops.
@@ -276,5 +276,9 @@
 
     #status{
         margin-bottom: 1.5vh;
+    }
+
+    .soldout{
+        color: red;
     }
   </style>

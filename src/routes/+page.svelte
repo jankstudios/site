@@ -80,6 +80,10 @@
             <a href="/icepop">
                 <div class="productimgbox">
                     <img id="productimg" src="/icepop/icepop.webp" alt="ICE Pop">
+
+                    <div class="soldoutbox">
+                        <h5 class="soldouttext">SOLD OUT</h5>
+                    </div>
                 </div>
                 <br>
                 <h5>ICE Pop</h5>
@@ -89,7 +93,7 @@
                     <h5 id="price">$29.99</h5>
                 </div>
                 <div id="buttons">
-                    <input
+                    <!-- <input
                         type="number" 
                         min="1" 
                         max="99" 
@@ -99,7 +103,7 @@
                         type="submit" 
                         value="Buy Now"
                         on:click={() => buy("ICEPOP", qty_icepop)}
-                    >
+                    > -->
                 </div>
             </div>
         </div>
@@ -108,6 +112,10 @@
             <a href="/icepop2">
                 <div class="productimgbox">
                     <img id="productimg" src="/icepop2/icepop2.webp" alt="2 ICE Pops">
+
+                    <div class="soldoutbox">
+                        <h5 class="soldouttext">SOLD OUT</h5>
+                    </div>
                 </div>
                 <br>
                 <h5>2x ICE Pop</h5>
@@ -117,7 +125,7 @@
                     <h5 id="price">$49.99</h5>
                 </div>
                 <div id="buttons">
-                    <input
+                    <!-- <input
                         type="number" 
                         min="1" 
                         max="99" 
@@ -127,7 +135,7 @@
                         type="submit" 
                         value="Buy Now"
                         on:click={() => buy("ICEPOP_X2", qty_icepop)}
-                    >
+                    > -->
                 </div>
             </div>
         </div>
@@ -136,6 +144,10 @@
             <a href="/icepopwithstand">
                 <div class="productimgbox">
                     <img id="productimg" src="/icepopwstand/icepopwstand.webp" alt="ICE Pop with stand">
+                
+                    <div class="soldoutbox">
+                        <h5 class="soldouttext">SOLD OUT</h5>
+                    </div>
                 </div>
                 <br>
                 <h5>ICE Pop w/ Stand</h5>
@@ -145,7 +157,7 @@
                     <h5 id="price">$44.99</h5>
                 </div>
                 <div id="buttons">
-                    <input
+                    <!-- <input
                         type="number" 
                         min="1" 
                         max="99" 
@@ -155,7 +167,7 @@
                         type="submit" 
                         value="Buy Now"
                         on:click={() => buy("ICEPOP_W_STAND", qty_icepop)}
-                    >
+                    > -->
                 </div>
             </div>
         </div>
@@ -164,6 +176,10 @@
             <a href="/icepopwithstand2">
                 <div class="productimgbox">
                     <img id="productimg" src="/icepopwstand2/icepopwstand2.webp" alt="2 ICE Pops With Stands">
+                
+                    <div class="soldoutbox">
+                        <h5 class="soldouttext">SOLD OUT</h5>
+                    </div>
                 </div>
                 <br>
                 <h5>2x ICE Pop w/ Stand</h5>
@@ -173,7 +189,7 @@
                     <h5 id="price">$69.99</h5>
                 </div>
                 <div id="buttons">
-                    <input
+                    <!-- <input
                         type="number" 
                         min="1" 
                         max="99" 
@@ -183,7 +199,7 @@
                         type="submit" 
                         value="Buy Now"
                         on:click={() => buy("ICEPOP_W_STAND_X2", qty_icepop)}
-                    >
+                    > -->
                 </div>
             </div>
         </div>
@@ -275,6 +291,23 @@
         height: auto;        /* override fixed heights */
         aspect-ratio: 1 / 1; /* square */
         box-sizing: border-box;
+        position: relative;
+    }
+
+    .soldoutbox{
+        position: absolute;
+        width: 90%;
+        height: calc(var(--h5-size) * 2);
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 0, 0, 0.35);
+    }
+
+    .soldouttext{
+        color: red;
+        text-align: center;
+        padding-top: calc(var(--h5-size) / 2.75);
     }
 
     /* Make the image fill without causing overflow */
@@ -296,6 +329,7 @@
     }
 
     #orderbox{
+        height: calc(var(--h5-size) * 1.35); /* same height as input[type="number"] in app.css */
         margin-top: 1vh;
         display: block;
     }
